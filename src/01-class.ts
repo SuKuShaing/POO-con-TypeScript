@@ -18,7 +18,7 @@ console.log("----------------")
 
 let myVar;
 
-class MyDate {
+export class MyDate {
     year: number;
     month: number;
     day: number;

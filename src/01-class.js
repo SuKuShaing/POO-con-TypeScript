@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MyDate = void 0;
 var date = new Date();
 console.log(date.toLocaleDateString());
 console.log(date.getTime());
@@ -21,5 +24,6 @@ var MyDate = /** @class */ (function () {
     }
     return MyDate;
 }());
+exports.MyDate = MyDate;
 var myDate = new MyDate(1993, 4, 1);
 console.log(myDate);
