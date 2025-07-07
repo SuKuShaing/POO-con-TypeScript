@@ -1,7 +1,7 @@
 // Public: Las propiedades y métodos son públicos por defecto, desde fuera se puede acceder y modificar
 // readonly: Las propiedades son solo lectura, ya sea desde fuera o desde dentro no se puede modificar ni por sus propios métodos
-// Private: en el siguiente archivo
-// Protected: en el siguiente archivo
+// Private: en el siguiente archivo 04
+// Protected: en el siguiente archivo 09
 
 export class MyDate {
     year: number;
