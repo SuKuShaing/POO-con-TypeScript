@@ -1,3 +1,7 @@
+/*
+** Los atributos o métodos estáticos nos permiten usar los atributos o métodos sin crear una instancia de la clase
+*/
+
 console.log("Math.PI: ", Math.PI);
 console.log("Math.max: ", Math.max(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 
