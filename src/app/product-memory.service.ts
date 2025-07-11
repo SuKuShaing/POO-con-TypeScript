@@ -10,7 +10,7 @@ export class ProductMemoryService {
 		const newProduct = {
 			...data,
 			id: faker.number.int(),
-			createdAt: faker.date.recent(),
+			creationAt: faker.date.recent(),
 			updatedAt: faker.date.recent(),
 			category: {
 				id: faker.number.int(),
@@ -39,7 +39,11 @@ export class ProductMemoryService {
 		return this.arrayProducts[index];
 	};
 
-	findOne(id: Product['id']) {
+	findOne(id: Product['id']): Product | undefined {
 		return this.arrayProducts.find((item) => item.id === id);
+	}
+
+	getAll(): Product[] {
+		return this.arrayProducts;
 	}
 }
