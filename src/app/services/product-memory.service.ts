@@ -1,10 +1,11 @@
 import { faker } from '@faker-js/faker';
 
-import { Product } from './models/product.model';
-import { CreateProductDto, UpdateProductDto } from './dtos/product.dto';
+import { Product } from '../models/product.model';
+import { CreateProductDto, UpdateProductDto } from '../dtos/product.dto';
+import { ProductService } from '../models/product-service.model';
 
-export class ProductMemoryService {
-	private arrayProducts: Product[] = [];
+export class ProductMemoryService implements ProductService {
+	private arrayProducts: Product[] = []; // variable privada para guardar en memoria
 
 	create(data: CreateProductDto): Product {
 		const newProduct = {
