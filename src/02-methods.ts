@@ -27,11 +27,11 @@ export class MyDate {
 }
 
 const myDate = new MyDate(1993, 5, 1);
-console.log(myDate.printFormat());
+console.log(myDate.printFormat());  // 01/05/1993
 myDate.add(5, 'days');
-console.log(myDate.printFormat());
+console.log(myDate.printFormat());  // 06/05/1993
 myDate.add(1, 'months');
-console.log(myDate.printFormat());
-console.log(myDate.day);
-console.log(myDate.month);
-console.log(myDate.year);
+console.log(myDate.printFormat());  // 06/06/1993
+console.log(myDate.day);            // 6
+console.log(myDate.month);          // 6
+console.log(myDate.year);           // 1993

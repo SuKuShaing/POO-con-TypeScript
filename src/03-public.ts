@@ -32,7 +32,7 @@ export class MyDate {
 }
 
 const myDate = new MyDate(1993, 5, 1);
-console.log(myDate.day);
-myDate.day = 12;
-console.log(myDate.day);
+console.log(myDate.day);    // 1
+myDate.day = 12;            // Se puede modificar porque es publico
+console.log(myDate.day);    // 12
 
