@@ -21,36 +21,37 @@ export class Animal {
 }
 
 const fifi = new Animal('fifi');
-fifi.move();
-console.log(fifi.greeting());
+fifi.move();                        // fifi is moving
+console.log(fifi.greeting());       // Hello, I'm fifi
 
 export class Dog extends Animal {
 
-    constructor( // sí se desea añadir una nueva propiedad (owner): se debe colocar las propiedades del padre y luego las propiedades del hijo
-        name: string, // no se le coloca el acceso porque eso lo hace el constructor del padre
+    constructor(                    // sí se desea añadir una nueva propiedad (owner): se debe colocar las propiedades del padre y luego las propiedades del hijo
+        name: string,               // no se le coloca el acceso porque eso lo hace el constructor del padre
         public owner: string,
     ) {
-        super(name); // y enviar las propiedades del padre al constructor del padre
+        super(name);                // y enviar las propiedades del padre al constructor del padre
     }
 
-    woof(times: number): void {  // en la herencia permite añadir métodos
+    woof(times: number): void {     // en la herencia permite añadir métodos
         for (let i = 0; i < times; i++) {
             console.log(`${this.name}: woof!`);
         }
-        this.doSomething();
+        this.doSomething();          // se llama a un método del padre con this puesto que no está sobreescrito dicho método
     }
 
-    move(): void {
+    move(): void {                  // se sobreescribe el método del padre, pero no desaparece el método del padre
         console.log('Moving as a dog');
-        super.move(); // se llama a un método del padre
+        super.move();               // se llama a un método del padre con super
+        // this.move();             // ejecuta este mismo método haciendo una recursión infinita
     }
 }
 
 const cheis = new Dog('cheis', "Seba");
-cheis.move();
-console.log(cheis.greeting());
-cheis.woof(1);
-console.log('Owner: ', cheis.owner);
-// cheis.name = 'Cambié el nombre'; // no se puede porque es protected
-cheis.woof(1);
-cheis.move();
+cheis.move();                        // Moving as a dog -> cheis is moving
+console.log(cheis.greeting());       // Hello, I'm cheis
+cheis.woof(1);                       // cheis: woof! -> Doing something
+console.log('Owner: ', cheis.owner); // Owner:  Seba
+// cheis.name = 'Cambié el nombre';  // no se puede porque es protected
+cheis.woof(1);                       // cheis: woof! -> Doing something
+cheis.move();                        // Moving as a dog -> cheis is moving

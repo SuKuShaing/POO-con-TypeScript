@@ -60,21 +60,21 @@ const myDate = new MyDate(1993, 10, 10);
 // console.log("getDay() => ", myDate.getDay());
 console.log("(10/10/1993) => ", myDate.printFormat());
 
-// myDate.day = 12; // Error: La propiedad 'day' es privada y solo se puede acceder desde dentro de la clase 'MyDate'.
+// myDate.day = 12; // Error: La propiedad 'day' es privada, no se puede asignar y solo se puede acceder desde dentro de la clase 'MyDate'.
 myDate.day; // Podemos acceder a la propiedad privada a través del getter
 console.log("🚀 ~ myDate.day:", myDate.day) // se puede acceder
 // myDate.day = 20; // no podemos modificar la propiedad privada a través del getter
 
 // myDate.isLeapYear(); // es un método
-myDate.isLeapYear; // Podemos acceder al método como si fuera una propiedad
+myDate.isLeapYear; // Podemos acceder al método como si fuera una propiedad y no se puede enviar parámetros
 
-console.log("🚀 ~ myDate.isLeapYear:", myDate.isLeapYear) // se puede acceder
+console.log(`${myDate.printFormat()} myDate.isLeapYear:`, myDate.isLeapYear) // se puede acceder
 
 const myDate2 = new MyDate(2024, 10, 10);
-console.log("🚀 ~ myDate2.isLeapYear:", myDate2.isLeapYear);
+console.log(`${myDate2.printFormat()} myDate2.isLeapYear:`, myDate2.isLeapYear);
 
 const myDate3 = new MyDate(2023, 10, 10);
-console.log("🚀 ~ myDate3.isLeapYear:", myDate3.isLeapYear);
+console.log(`${myDate3.printFormat()} myDate3.isLeapYear:`, myDate3.isLeapYear);
 
 const myDate4 = new MyDate(2022, 10, 10);
-console.log("🚀 ~ myDate4.isLeapYear:", myDate4.isLeapYear);
+console.log(`${myDate4.printFormat()} myDate4.isLeapYear:`, myDate4.isLeapYear);

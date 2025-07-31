@@ -53,23 +53,23 @@ export class MyDate {
 }
 
 const myDate = new MyDate(1993, 10, 10);
-console.log("getDay() => ", myDate.getDay());
-console.log("(10/10/1993) => ", myDate.printFormat());
+console.log("getDay() => ", myDate.getDay());                           // 10
+console.log("(10/10/1993) => ", myDate.printFormat());                  // 10/10/1993
 
 const myDate2 = new MyDate();
-console.log("() => ", myDate2.printFormat());
+console.log("() => ", myDate2.printFormat());                           // 09/07/1993
 
 const myDate3 = new MyDate(2022);
-console.log("(2022) => ", myDate3.printFormat());
+console.log("(2022) => ", myDate3.printFormat());                       // 09/07/2022
 
 const myDate4 = new MyDate(2022, 3);
-console.log("(2022, 3) => ", myDate4.printFormat());
+console.log("(2022, 3) => ", myDate4.printFormat());                    // 09/03/2022
 
-const myDate5 = new MyDate(3);  // Se asigna el número al primer parámetro, en este caso el año
-console.log("(3) => ", myDate5.printFormat());
+const myDate5 = new MyDate(3);                                          // Se asigna el número al primer parámetro, en este caso el año
+console.log("(3) => ", myDate5.printFormat());                          // 09/07/0003
 
-const myDate6 = new MyDate(3, 5);  // Se asignan los números al primer y segundo parámetro, en este caso el año y el mes
-console.log("(3, 5) => ", myDate6.printFormat());
+const myDate6 = new MyDate(3, 5);                                       // Se asignan los números al primer y segundo parámetro, en este caso el año y el mes
+console.log("(3, 5) => ", myDate6.printFormat());                       // 09/05/0003
 
-const myDate7 = new MyDate(undefined, undefined, 4);  // Para asignar un valor al último parámetros, el día, se debe usar undefined en los parámetros anteriores
-console.log("(undefined, undefined, 4) => ", myDate7.printFormat());
+const myDate7 = new MyDate(undefined, undefined, 4);                    // Para asignar un valor al último parámetros, el día, se debe usar undefined en los parámetros anteriores
+console.log("(undefined, undefined, 4) => ", myDate7.printFormat());    // 09/07/0004

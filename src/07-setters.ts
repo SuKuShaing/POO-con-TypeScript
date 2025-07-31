@@ -70,7 +70,7 @@ export class MyDate {
 	}
 
 	// Los setters no retornan nada, : void 
-    //son simplemente para asignar valores
+    // son simplemente para asignar valores
 	set month(newValue: number) {
 		if (newValue >= 1 && newValue <= 12) {
             this._month = newValue;
@@ -81,10 +81,10 @@ export class MyDate {
 }
 
 const myDate = new MyDate(1993, 10, 10);
-console.log('(10/10/1993) => ', myDate.printFormat());
+console.log('(10/10/1993) => ', myDate.printFormat());	// 10/10/1993
 
 myDate.month = 4;
-console.log("myDate.month = 4 => ", myDate.month);
+console.log("myDate.month = 4 => ", myDate.month);		// 4
 
 myDate.month = 78;
-console.log("myDate.month = 78 => ", myDate.month);
+console.log("myDate.month = 78 => ", myDate.month);		// Error: Mes fuera de rango, el setter verifica que el valor sea válido
