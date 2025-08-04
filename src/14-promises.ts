@@ -22,13 +22,13 @@ import axios from "axios";
 
     console.log("---".repeat(10));
     const rta = await delay(3000);
-    console.log(rta);
+    console.log(rta); // retorna string
 
     console.log("---".repeat(10));
     const products = await getProducts();
-    console.log(products.data);
+    console.log(products.data.length); // retorna 47 (el número de productos)
 
     console.log("---".repeat(10));
     const products2 = await getProductsAsync();
-    console.log(products2);
+    console.log(products2.length); // retorna 47 (el número de productos)
 })();

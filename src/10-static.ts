@@ -15,8 +15,8 @@ class MyMath {
 }
 
 // Al ser Static no se necesita esto:
-// const myMath = new MyMath();
-// console.log(myMath.PI);
+// const instanceMyMath = new MyMath();
+// console.log(instanceMyMath.PI);
 
 console.log("MyMath.PI: ", MyMath.PI);
 

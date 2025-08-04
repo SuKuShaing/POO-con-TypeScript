@@ -18,6 +18,11 @@ export abstract class Animal {  // al colocarle abstract no se permite crear obj
 	}
 }
 
+/**
+ * Clase hija que hereda de la clase abstracta Animal
+ * @param name - El nombre del perro
+ * @param owner - El dueño del perro
+ */
 export class Dog extends Animal { // de esta clase si se pueden crear instancias
     constructor( // sí se desea añadir una nueva propiedad (owner): se debe colocar las propiedades del padre y luego las propiedades del hijo
         name: string, // no se le coloca el acceso porque eso lo hace el constructor del padre
