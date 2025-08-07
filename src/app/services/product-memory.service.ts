@@ -8,7 +8,7 @@ export class ProductMemoryService implements ProductService {
 	private arrayProducts: Product[] = []; // variable privada para guardar en memoria
 
 	create(data: CreateProductDto): Product {
-		const newProduct = {
+		const newProduct = {				// esparce los datos enviados por el usuario y añade los datos que debería generar el backend
 			...data,
 			id: faker.number.int(),
 			creationAt: faker.date.recent(),
@@ -25,7 +25,7 @@ export class ProductMemoryService implements ProductService {
 		return this.add(newProduct);
 	};
 
-	add(product: Product) {
+	add(product: Product): Product {
 		this.arrayProducts.push(product);
 		return product;
 	};

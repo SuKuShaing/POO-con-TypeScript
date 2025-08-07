@@ -1,5 +1,4 @@
 import axios from "axios";
-
 import { Product } from "./models/product.model";
 
 let anyVar: any = 12;
